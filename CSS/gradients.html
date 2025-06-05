@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Examples</title>
+<style>
+    div{
+        height: 200px;
+    }
+    .linear-gradient {
+        background: linear-gradient(to right, #04b8f9, #04ff00); /* Red to Blue */
+    }
+
+    .radial-gradient {
+        background: radial-gradient(circle, #ff0000, #0000ff); /* Red to Blue */
+    }
+
+    .elliptical-gradient {
+        background: radial-gradient(ellipse, #ff0000, #0000ff); /* Red to Blue */
+    }
+
+    .gradient-with-position {
+        background: radial-gradient(circle at 10% 30%, #ff0000, #0000ff); /* Red to Blue */
+    }
+    .multiple-colors-gradient {
+        background: linear-gradient(to right, #ff0000, #00ff00, #0000ff, #ff0000, #00ff00, #0000ff); /* Red to Green to Blue */
+    }
+
+/* 
+        to top: Gradient starts from bottom to top.
+        to bottom: Gradient starts from top to bottom.
+        to left: Gradient starts from right to left.
+        to right: Gradient starts from left to right.
+        to top left: Gradient starts from bottom right to top left.
+        to top right: Gradient starts from bottom left to top right.
+        to bottom left: Gradient starts from top right to bottom left.
+        to bottom right: Gradient starts from top left to bottom right.
+
+        we can also use angles to specify custom directions: 
+
+        .custom-angle-gradient {
+            height: 100px;
+            background: linear-gradient(45deg, #ff0000, #0000ff); 
+        }
+*/
+
+</style>
+</head>
+<body>
+    <div class="linear-gradient">
+        <h1>linear-gradient</h1>
+    </div>
+    <div class="radial-gradient">
+        <h1>radial-gradient</h1></div>
+    <div class="elliptical-gradient">
+        <h1>elliptical-gradient</h1></div>
+    <div class="gradient-with-position">
+        <h1>gradient-with-position</h1></div>
+    <div class="multiple-colors-gradient">
+        <h1>multiple-colors-gradient</h1></div>
+</body>
+</html>

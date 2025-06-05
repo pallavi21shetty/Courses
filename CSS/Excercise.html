@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        div{
+            width: 100%;
+        }
+
+        #nav{
+            background-color: rgb(235, 231, 231);
+            height: 90px;
+        }
+
+        #banner{
+            background-image: url(https://images.pexels.com/photos/7130560/pexels-photo-7130560.jpeg?cs=srgb&dl=pexels-codioful-7130560.jpg&fm=jpg);
+            height: 60vh; 
+        }
+
+        #features{
+            background-color: rgb(4, 105, 200);
+            min-height: 30vh;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #footer{
+            background-color: #000;
+            height: 20vh; 
+            padding: 30px;
+        }
+        #nav-menu{
+            display: inline-block;
+            margin-left: 60%;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .nav-items{
+            display:  inline-block;
+            height: 30px;
+            width: 90px;
+            padding: 20px;
+        }
+        
+        .nav-items2{
+            width: 90px;
+            color: #fff;
+        }
+
+        .logo{
+            height: 75px; 
+            padding-top: 20px;
+            padding-left:100px;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        .a_modified{
+            text-decoration:none;
+            color: #fff;
+        }
+
+        .card{
+            height: 200px;
+            width: 200px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px #d4d2d2;
+            display: inline-block;
+            margin: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/377px-Wipro_Primary_Logo_Color_RGB.svg.png" alt="logo" 
+        class="logo"/>
+
+        <ul id="nav-menu">
+            <li class="nav-items"><a href="#">Home</a></li>
+            <li class="nav-items"><a href="about.html">About</a></li>
+            <li class="nav-items"><a href="products.html">Products</a></li>
+            <li class="nav-items"><a href="contact.html">Contact</a></li>
+        </ul>
+
+
+    </div>
+
+    <div id="banner">
+
+        <div style="padding: 150px; color: aliceblue; display: inline-block;width: 48%;overflow: hidden;height: 550px;">
+            <h1>Welcome ITD CSS Tutorial!!!</h1>
+            <p> Lets Learn CSS!!!</p>
+        </div>
+
+        <div style="color: aliceblue; display: inline-block;width: 48%;padding: 40px;">
+            <img src="https://ecubesolutionsindia.com/wp-content/uploads/2015/09/abt.jpg" 
+            style="width: 80%;margin-left: 10%;margin-right: 10%;border-radius: 20px ;">
+        </div>
+
+    </div>
+
+    <div id="features">
+        <div class="card">
+            <p style="text-align: center;padding-top: 60px;">Project 1</p>
+        </div>
+        <div class="card">
+            <p style="text-align: center;padding-top: 60px;">Project 2</p>
+        </div>
+        <div class="card">
+            <p style="text-align: center;padding-top: 60px;">Project 3</p>
+        </div>
+        <div class="card">
+            <p style="text-align: center;padding-top: 60px;">Project 4</p>
+        </div>
+        <div class="card">
+            <p style="text-align: center;padding-top: 60px;">Project 5</p>
+        </div>
+
+    </div>
+
+
+    <div id="footer">
+        <div style="display: inline-block;width: 70%;overflow: hidden;color: azure;">
+            <h3>Comapny Name</h3>
+            <ul>
+                <li>Address: Somewhere in Bangalore</li>
+                <li>Address: 2nd Line</li>
+                <li>Phone: 90909090909</li>
+            </ul>
+        </div>
+        <div style="display: inline-block;width: 28%;overflow: hidden;color: azure;">
+            <h3>Comapny Name</h3>
+            <ul>
+                <li class="nav-items2"><a class="a_modified" href="#">Home</a></li>
+                <li class="nav-items2"><a class="a_modified"  href="about.html">About</a></li>
+                <li class="nav-items2"><a class="a_modified"  href="products.html">Products</a></li>
+                <li class="nav-items2"><a class="a_modified"  href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+    
+
+    
+</body>
+</html>

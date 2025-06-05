@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    
+    <style>
+        .main{
+            display: flex; 
+            border: 10px solid black;
+            margin: 20px;
+            background-color: rgb(233, 172, 17); 
+            padding: 40px;
+            height: 400px; 
+            flex-direction: row;
+            flex-wrap: wrap;
+        
+        }
+        .item { 
+            background-color: rgb(255, 255, 255); 
+            text-align: center; 
+            padding: 25px; 
+            border: 5px solid rgb(93, 249, 9);
+            margin: 5px;
+            font-size: 30px; 
+        } 
+        #start{
+            align-content: flex-start;
+        }
+
+    #end{
+        align-content: end;
+    }
+    #space-between{
+        align-content: space-between;
+    }
+    </style>
+
+</head>
+<body>
+    
+    <div class="main" id="start">
+        <div class="item">Home</div>
+        <div class="item">Service</div>
+        <div class="item">About</div>
+        <div class="item">Contact</div>
+    
+    </div>
+
+     <div class="main" id="end">
+        <div class="item">Home</div>
+        <div class="item">Service</div>
+        <div class="item">About</div>
+        <div class="item">Contact</div>
+    
+    </div>
+
+     <div class="main" id="space-between">
+        <div class="item">Home</div>
+        <div class="item">Service</div>
+        <div class="item">About</div>
+        <div class="item">Contact</div>
+    
+    </div>
+
+</body>
+</html>

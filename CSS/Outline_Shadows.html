@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Shadows and Outline Example</title>
+  <style>
+    /* Common styles */
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    /* Outline example */
+    .outline-example {
+      border:10px solid blue;
+      background-color: lightblue;
+      outline: 10px dashed rgb(133, 103, 103);
+      border-radius: 50%;
+    }
+
+    /* Box shadow example */
+    .box-shadow-example {
+      background-color: RGB(0,0,255, 1);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Text shadow example */
+    .text-shadow-example {
+      background-color: lightyellow;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body style="background-color: red;">
+
+  <!-- Outline example -->
+  <div class="box outline-example">
+    Outline Example
+  </div>
+
+  <!-- Box shadow example -->
+  <div class="box box-shadow-example">
+    Box Shadow Example
+  </div>
+
+  <!-- Text shadow example -->
+  <div class="box text-shadow-example">
+    Text Shadow Example
+  </div>
+
+</body>
+</html>

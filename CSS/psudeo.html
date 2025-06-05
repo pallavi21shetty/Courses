@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Anchor Tags with Pseudo-Selectors</title>
+    <style>
+        /* Normal state */
+        a:link {
+            color: blue; /* Default color for unvisited links */
+            text-decoration: none; /* Remove underline for unvisited links */
+        }
+
+        /* Visited state */
+        a:visited {
+            color: purple; /* Color for visited links */
+        }
+
+        /* Hover state */
+        a:hover {
+            color: red; /* Color when hovered over */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        /* Active state */
+        a:active {
+            color: green; /* Color when clicked */
+        }
+
+        /* Focus state */
+        a:focus {
+            outline: 2px solid orange; /* Add outline when focused */
+        }
+
+
+
+
+
+        #names_list li:nth-child(6) {
+            border: 2px solid rgb(255, 0, 4);
+            margin-bottom: 1px;
+        }
+
+        #names_list li:nth-child(even) {
+            background-color: rgb(7, 180, 249);
+        }
+
+        p, h1, a {
+            color:red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<p>Try clicking on and hovering over the links:</p>
+<ul>
+    <li><a href="https://www.amazon.in">Unvisited Link</a></li>
+    <li><a href="https://www.myntra.com">Visited Link</a></li>
+    <li><a href="https://www.tatacliq.com">Hover Over Me</a></li>
+    <li><a href="https://www.ajio.com">Click Me</a></li>
+    <li><a class="active" href="https://www.something  .com">Tab to Focus Me</a></li>
+</ul>
+
+
+
+
+<p>Track & field champions:</p>
+<ul id="names_list">
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
+</ul>
+
+</body>
+</html>

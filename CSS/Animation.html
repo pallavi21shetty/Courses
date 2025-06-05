@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animations Example</title>
+<style>
+    /* Define styles for the element */
+    .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation: scaleAndRotate 4s infinite ease-in-out;
+    }
+
+    /* Define the animation */
+    @keyframes scaleAndRotate {
+        0% {
+            left: 0;
+            top: 0;
+        }
+        25% {            
+            left: 500px;
+            top: 0;
+        }
+        50% {            
+            left: calc(100% - 100px);
+            top: calc(100% - 100px);
+        }
+        75% {            
+            left: 0;
+            top: calc(100% - 100px);
+        }
+        100% {
+            left: 0;
+            top: 0;     
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- HTML content -->
+<div class="box"></div>
+
+</body>
+</html>

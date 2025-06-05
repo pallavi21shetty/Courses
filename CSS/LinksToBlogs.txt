@@ -1,0 +1,5 @@
+Standards for HTML and CSS
+https://medium.com/@luqman.qureshi/think-twice-code-once-c49faa8cd18
+
+CSS Variables
+https://medium.com/free-code-camp/everything-you-need-to-know-about-css-variables-c74d922ea855

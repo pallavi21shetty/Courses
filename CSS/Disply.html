@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Property Examples</title>
+<style>
+    /* Block */
+    .block {
+        display: block;
+        width: 200px;
+        height: 50px;
+        background-color: lightblue;
+        margin-bottom: 10px;
+    }
+
+    /* Inline */
+    .inline {
+        display: inline;
+        background-color: lightgreen;
+        padding: 5px 10px;
+        margin-right: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Inline-Block */
+    .inline-block {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        margin-right: 10px;
+    }
+
+    /* None */
+    .none {
+        display: none;
+    }
+
+    /* Flex */
+    .flex-container {
+        display: flex;
+    }
+    .flex-item {
+        width: 50px;
+        height: 50px;
+        background-color: lightgoldenrodyellow;
+        margin-right: 5px;
+    }
+
+    /* Grid */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 10px;
+    }
+    .grid-item {
+        width: 100px;
+        height: 50px;
+        background-color: lightpink;
+    }
+</style>
+</head>
+<body>
+    <!-- Block -->
+    <div class="block">Block</div>
+
+    <!-- Inline -->
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+
+    <!-- Inline-Block -->
+    <div class="inline-block">Inline-Block</div>
+    <div class="inline-block">Inline-Block</div>
+    <div class="inline-block">Inline-Block</div>
+
+    <!-- None -->
+    <div class="none">None</div> <!-- This won't be displayed -->
+
+    <!-- Flex -->
+    <div class="flex-container">
+        <div class="flex-item">Flex</div>
+        <div class="flex-item">Flex</div>
+        <div class="flex-item">Flex</div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid-container">
+        <div class="grid-item">Grid</div>
+        <div class="grid-item">Grid</div>
+        <div class="grid-item">Grid</div>
+    </div>
+</body>
+</html>

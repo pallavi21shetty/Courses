@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+
+    <style>
+        .content-box {
+            height: 200px;
+            width: 200px;
+            box-sizing: content-box;
+            padding: 20px;
+            margin:20px;
+            border: 10px solid red;
+            background-color: aquamarine;
+            /* float:left; */
+        }
+
+        .border-box{
+            height: 200px;
+            width: 200px;
+            box-sizing:border-box;
+            padding: 20px;
+            margin:20px;
+            border: 20px solid red;
+            /* float: left; */
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <p>Karnataka, the 7th largest state in terms of area in India. Banglore is the capital of karnataka</p>
+    </div>
+
+    <div class="border-box">
+        <p>India has a unique culture and is one of the oldest and greatest civilizations of the world.</p>
+    </div>
+
+</body>
+</html>

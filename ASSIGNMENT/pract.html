@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.flex{
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    flex-direction: row-reverse;
+}
+.grid{
+    display: grid;
+    margin: 10px;
+    padding: 20px;
+    grid-gap:5px;
+}
+
+
+.item{
+    border: 5px solid red;
+    padding: 20px;
+}
+.item1{
+    border: 3px solid blue;
+    padding: 10px;
+}
+
+.it1{
+    grid-column: 1;
+    grid-row: 1 /span 2;
+}
+
+.it2{
+    grid-column: 2;
+    grid-row: 3 /span 1;
+}
+
+.it3{
+    grid-column: 3;
+    grid-row: 1 /span 1;
+}
+
+.relative{
+    position: relative;
+    padding:10px;
+    border: 5px solid black;
+    top:2px;
+    left:3px;
+    height:400px;
+}
+
+.main{
+    position: relative;
+    border: 2px solid red;
+}
+
+.absolute{
+    position: absolute;
+    padding:10px;
+    border: 5px solid black;
+}
+
+
+    </style>
+</head>
+
+
+<body>
+    
+    <div class="flex">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="grid">
+        <div class="item1 it1">1</div>
+        <div class="item1 it2">2</div>
+        <div class="item1 it3">3</div>
+    </div>
+
+
+
+    <div class="relative">
+        <h2>this is heading</h2>
+    </div>
+
+    <div class="main">
+        <div class="absolute">
+<h1>this is absolute</h1>
+        </div>
+    </div>
+</body>
+</html>

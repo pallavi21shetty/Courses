@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positioning Examples</title>
+<style>
+ 
+    .static-box {
+        position: static;
+        border: 2px solid red;
+        padding: 20px;
+        height: 100px;
+        /* top: 50px;
+        right: 50px;
+        left: 40px; */
+    }
+
+    .relative-box {
+        position: relative;
+        top: 50px;
+        right: 50px;
+        left: 40px;
+        border: 2px solid blue;
+        padding: 10px;
+        width: 200px;
+    }
+
+    .absolute-container {
+        position: relative;
+        height: 200px;
+        border: 2px solid green;
+    }
+    .absolute-box {
+        position: absolute;
+        bottom: 0px;
+        left: 45%;
+        border: 2px solid orange;
+        padding: 10px;
+    }
+
+    .fixed-box1 {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        border: 2px solid purple;
+        padding: 10px;
+        background-color: red;
+        z-index: 3;
+    }
+
+    .fixed-box2 {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        border: 2px solid purple;
+        padding: 10px;
+        background-color: green;
+        z-index: 2;
+    }
+
+    .sticky-box {
+        position: sticky;
+        top: 100px;
+        background-color: lightgray;
+        padding: 10px;
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body style="height: 300vh;">
+
+<div class="static-box">Static Positioning</div>
+
+<div class="relative-box">Relative Positioning</div>
+
+<div class="absolute-container">
+    <div class="absolute-box">Absolute Positioning</div>
+</div>
+
+<div class="fixed-box1">Fixed 1</div>
+<div class="fixed-box2">Fixed 2</div>
+
+<div style="height: 500px; padding-top: 200px;">Scroll down</div>
+<div class="sticky-box">Sticky Positioning</div>
+<p>Gateway to wildlife wonders: Sanctuaries and reserves. For the nature enthusiast, Karnataka is a paradise of biodiversity. The state proudly hosts the Bandipur National Park and Nagarhole National Park, where elusive tigers, majestic elephants, and a plethora of wildlife roam freely.</p>
+<p>Karnataka, the 7th largest state in terms of area in India. It is situated on the western edge of Deccan plateau and with Maharashtra and Goa to its north, Kerala and Tamil Nadu to its south, Andhra Pradesh to its east and Arabian Sea to its west.</p>
+</body>
+</html>
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-content Examples</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 400px; /* Set a fixed height to demonstrate alignment */
+      border: 2px solid #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: #ffcc00;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      color: #333;
+      flex-direction: column;
+    }
+
+    /* Different align-content values for different divs */
+    #start {
+      align-content: flex-start;
+    }
+
+    #end {
+      align-content: flex-end;
+    }
+
+    #center {
+      align-content: center;
+    }
+
+    #space-between {
+      align-content: space-between;
+    }
+
+    #space-around {
+      align-content: space-around;
+    }
+
+    #stretch {
+      align-content: stretch;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="start">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="container" id="end">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="container" id="center">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="container" id="space-between">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="container" id="space-around">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <div class="container" id="stretch">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</body>
+</html>

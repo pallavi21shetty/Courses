@@ -1,0 +1,100 @@
+ ul#main{
+    float: right;
+}
+
+#main li{
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+}
+
+
+#main li a{  
+    text-decoration: none;
+}
+
+#main li a:hover{  
+    color: red;
+}
+
+#main li a:active{  
+    color: rgb(255, 234, 0);
+}
+
+
+ul#nested{
+    display: none;
+    position: absolute;
+    left: -20px;
+    width: 150px;
+}
+
+#nested li{
+    background-color: rgb(85, 85, 27);
+    display: block;
+    padding-right: 20px;
+    padding: 10px 5px;
+
+}
+
+#nested li:hover{
+    background-color: rgb(37, 7, 113);
+}
+
+
+#main li:hover ul#nested{
+    display: block;
+} 
+
+
+@media screen{
+    .image{
+        width: 22%;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width:1200px){
+    .image{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .image{
+        width: 48%;
+    }
+}
+
+
+@media print{
+    .image{
+        display: n;
+    }
+} 
+
+
+
+*{
+    background-color: yellow;
+    padding: 20px;
+}
+
+
+h1{
+    background-color: red;
+    padding: 20px;
+}
+
+
+
+.heading{
+    background-color: green;
+    padding: 20px;
+}
+
+#first_heading{
+    background-color: rgb(0, 75, 128);
+    padding: 20px;
+}

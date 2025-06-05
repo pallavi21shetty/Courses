@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+
+<style>
+    * {
+        background-color: yellow;
+    }
+    h3 {
+        background-color: red;
+    }
+
+     h1 {
+            background-color: red;
+            color: white;
+        }
+
+        #second {
+            background-color: black;
+            color: white;
+        }
+
+        .third {
+            background-color: pink;
+            color: blue;
+        }
+
+        #second1 {
+            color: blue;
+        }
+
+        .third1 {
+            color: red;
+        }
+
+</style>
+
+</head>
+
+<body>
+    <h3>This is heading. universal selector has low priority than element. hence it is the lowest priority</h3>
+
+     <h1 id="second" class="third">
+        ID is more prior than universal, element and class. Hence ID has second highest priority. 
+    </h1>
+    <h1>
+        Element selectors has low priority.
+    </h1>
+    <h1 class="third">
+        Classes have higher priority
+        than element selectors and universal selector.
+    </h1>
+
+    <h2 style="color: green;" 
+        id="second1"
+        class="third1">
+        Inline CSS has highest priority.
+      </h2>
+</body>
+</html>

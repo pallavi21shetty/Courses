@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Sizing Example</title>
+  <style>
+    /* Apply box-sizing: border-box; to all elements */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* content-box example */
+    .content-box {
+      width: 200px;
+      padding: 10px;
+      border: 10px solid black;
+      margin: 20px;
+
+
+      float: left;
+      color: aliceblue;
+      background-color: rgb(255, 0, 0);
+      box-sizing: content-box;
+    }
+
+    /* border-box example */
+    .border-box {
+      width: 200px;
+      padding: 50px;
+      border: 50px solid black;
+      margin: 20px;
+
+      float: left; 
+      background-color: lightgreen;
+      box-sizing: border-box; /* Override universal box-sizing for demonstration */
+    }
+
+    /* Clearing float */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-box">
+    <h2>Content Box</h2>
+    <p>This box uses <code>box-sizing: content-box;</code>.</p>
+    <p>The specified width and height only apply to the content area.</p>
+    <p>Padding and border are added to the specified width and height.</p>
+  </div>
+
+  <div class="border-box">
+    <h2>Border Box</h2>
+    <p>This box uses <code>box-sizing: border-box;</code>.</p>
+    <p>The specified width and height include padding and border.</p>
+    <p>This is often preferred for easier sizing and layout control.</p>
+  </div>
+
+  <div class="clearfix"></div>
+
+</body>
+</html>

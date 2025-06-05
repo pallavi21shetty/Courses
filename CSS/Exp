@@ -1,0 +1,13 @@
+Screens
+Print
+Speech
+
+        Media Queries
+
+all
+
+
+@media (media feature) and (media feature)..... {
+
+
+}
