@@ -211,8 +211,19 @@
 // console.log(message);
 
 //ex 2
-let age = 21;
-const result =
-    (age >= 18) ? "You are eligible to vote."
-        : "You are not eligible to vote.";
-console.log(result);
+// let age = 21;
+// const result =
+//     (age >= 18) ? "You are eligible to vote."
+//         : "You are not eligible to vote.";
+// console.log(result);
+
+
+
+let num=22;
+if(num % 2==0){
+    console.log("even")
+}
+else{
+    console.log("odd");
+    
+}
