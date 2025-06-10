@@ -159,9 +159,19 @@
 
 
 // express function
-let square= function(num1){
-     let sqr=num1 * num1
-       console.log(sqr);
+// let square= function(num1){
+//      let sqr=num1 * num1
+//        console.log(sqr);
+// }
+// square(5)
+// square(3)
+
+
+function table(num){
+        for(let i=1; i<=10; i++){
+                console.log(`${num} x ${i} = ${num*i}`);
+                
+        }
 }
-square(5)
-square(3)
+
+table(3)
