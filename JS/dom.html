@@ -1,0 +1,629 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+<script>
+document.getElementById('first_div').innerHTML="Good Day"
+
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+<script>
+let second_div=document.getElementById('second_div')
+
+second_div.innerHTML="<h1> Good Day</h1>"
+second_div.style.backgroundColor="yellow"
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!-- getElementById -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+<script>
+    let changeDivStyle =() =>{
+
+let second_div=document.getElementById('second_div')
+
+second_div.innerHTML="<h1> Good Day</h1>"
+second_div.style.backgroundColor="yellow"
+    }
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.getElementsByClassName('green_group')
+console.log(div_group);
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group group1">
+
+   </div>
+
+   <div id="second_div" class="green_group group2">
+
+   </div>
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.getElementsByClassName('group2')
+console.log(div_group);
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!-- getElementsByTagName -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.getElementsByTagName('div')
+console.log(div_group);
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+    div, section{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+   <div></div>
+
+ <section></section>
+
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.getElementsByTagName('div')
+console.log(div_group);
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- queryselector -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+    div, section{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+   <div></div>
+
+ <section></section>
+
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.querySelector('div')
+div_group.innerHTML="<h1> Good Day</h1>"
+div_group.style.backgroundColor="yellow"
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- queryselectorAll -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+    div, section{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+   <div></div>
+
+ <section></section>
+
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.querySelectorAll('div')
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+    div, section{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+   <div></div>
+
+ <section></section>
+
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.querySelectorAll('section')
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .green_group{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+    div, section{
+        background-color: aqua;
+        border: 1px solid black;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0px;
+    }
+</style>
+
+</head>
+<body>
+    <button onclick="changeDivStyle()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="first_div" class="green_group">
+
+   </div>
+
+   <div id="second_div" class="green_group">
+
+   </div>
+
+   <div></div>
+
+ <section></section>
+
+
+<script>
+    let changeDivStyle =() =>{
+
+let div_group = document.querySelectorAll('.green_group')
+for(el of div_group){
+el.innerHTML="<h1> Good Day</h1>"
+el.style.backgroundColor="yellow"
+    }
+
+}
+</script>
+
+</body>
+</html>

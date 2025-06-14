@@ -1,0 +1,301 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <button onclick="createDiv()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;">Click me </button>
+   <div id="root">
+
+   </div>
+
+<script>
+    let createDiv =() =>{
+let heading= document.createComment('h1')
+heading.innerHTML="testing Dom"
+heading.style.textAlign ='center'
+
+console.log(heading);
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <input type="button" onclick="createDiv()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;" value="Click me"/>
+   <div id="root">
+
+   </div>
+
+<script>
+    let createDiv =() =>{
+    let heading = document.createComment('h1')
+    heading.innerHTML="Testing Dom"
+heading.style.textAlign ='center'
+console.log(heading);
+document.querySelector('#root').appendChild(heading)
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <input type="button" onclick="createDiv()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;" value="Click me"/>
+   <div id="root">
+<h2 id="h2tag"> testing remove function
+     <small style="padding-left: 20px; color: blue;cursor: pointer;" onclick="removeElement"> remove</small></h2>
+   </div>
+
+<script>
+    let createDiv =() =>{
+let heading =document.createElement('h1')
+heading.innerHTML="Testing Dom"
+heading.style.textAlign='center'
+console.log(heading);
+
+document.querySelector('#root').appendChild(heading)
+
+}
+let removeElement =()=>{
+
+    let child = document.querySelector('#h2tag')
+
+document.querySelector('#root').removeChild(child)
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <input type="button" onclick="createDiv()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;" value="Click me"/>
+   <div id="root">
+<h2 id="h2tag"> testing remove function
+     <small style="padding-left: 20px; color: blue;cursor: pointer;" onclick="removeElement"> remove</small></h2>
+   </div>
+
+<script>
+    let createDiv =() =>{
+let heading =document.createElement('h1')
+heading.innerHTML="Testing Dom"
+heading.style.textAlign='center'
+heading.setAttribute('id' , "h1_tag")
+heading.setAttribute('name' , "h1_tag")
+console.log(heading);
+
+document.querySelector('#root').appendChild(heading)
+
+}
+let removeElement =()=>{
+
+    let child = document.querySelector('#h2tag')
+
+document.querySelector('#root').removeChild(child)
+
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <input type="button" onclick="createDiv()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;" value="Click me"/>
+   <div id="root">
+<h2 id="h2tag"> testing remove function
+     <small style="padding-left: 20px; color: blue;cursor: pointer;" onclick="removeElement"> remove</small></h2>
+  
+  <input id="name"  value="ok"/>
+    </div>
+
+<script>
+    let createDiv =() =>{
+let heading =document.createElement('h1')
+heading.innerHTML="Testing Dom"
+heading.style.textAlign='center'
+heading.setAttribute('id' , "h1_tag")
+heading.setAttribute('name' , "h1_tag")
+console.log(heading);
+
+document.querySelector('#root').appendChild(heading)
+
+}
+let removeElement =()=>{
+
+    let child = document.querySelector('#h2tag')
+
+document.querySelector('#root').removeChild(child)
+console.log(document.querySelector('#name').value);
+
+document.querySelector('#name').value="good"
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+border: 1px solid black;
+    }
+    .black{
+        background-color: black;
+    }
+    .white{
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+    <input type="button" onclick="createChessBoard()"
+    style="padding: 10px; width: 100px; margin: 20px; background-color: blue; color: white; border: 1px solid white;border-radius: 10px;" value="Click me"/>
+   <div id="root" style="display: flex; flex-wrap: wrap; height: 800px; width: 800px; margin: auto;">
+
+    </div>
+
+<script>
+let createChessBoard = () => {
+let root = document.querySelector('#root')
+let box
+let isBlack = false;
+for(let i=0; i<64; i++){
+
+
+box = document.createElement('div')
+box.classList.add('box')
+
+isBlack ? box.classList.add('black') : box.classList.add('white')
+
+// if(isBlack){
+//     box.classList.add('black')
+// }
+// else{
+//        box.classList.add('white')
+// }
+isBlack =!isBlack
+
+if((i+1)%8==0) isBlack =!isBlack
+
+// if((i+1)%8==0){
+//     isBlack =!isBlack
+// }
+
+root.appendChild(box)
+}
+}
+</script>
+
+</body>
+</html>
