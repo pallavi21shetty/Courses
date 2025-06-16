@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h3>Local storage</h3>
+<button onclick="saveToLocal('name', 'Sachin')">Save to Local Storage</button>
+<button onclick="alert(getFromLocal('name'))">Get from Local Storage</button>
+<button onclick="removeFromLocal('name')">Remove from Local Storage</button>
+
+
+<script>
+    function saveToLocal(key, value) {
+        localStorage.setItem(key, value);
+    }
+     function getFromLocal(key) {
+       return localStorage.getItem(key);
+    }
+     function removeFromLocal(key) {
+        localStorage.removeItem(key);
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h3>Session storage</h3>
+<button onclick="saveToSession('city', 'New York')">Save to Session Storage</button>
+<button onclick="alert(getFromSession('city'))">Get from Session Storage</button>
+<button onclick="removeFromSession('city')">Remove from Session Storage</button>
+
+
+<script>
+    function saveToSession(key, value) {
+        sessionStorage.setItem(key, value);
+    }
+     function getFromSession(key) {
+       return sessionStorage.getItem(key);
+    }
+     function removeFromSession(key) {
+        sessionStorage.removeItem(key);
+    }
+</script>
+</body>
+</html> -->
