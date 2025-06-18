@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    height: 100px;
+    width: 100px;
+}
+
+</style>
+</head>
+<body>
+    <button onclick="something()">
+        Click me
+    </button>
+    <div id="first_div">
+
+    </div>
+
+<script>
+let something =( )=>{
+    let first_div = document.getElementById('first_div')
+    first_div.innerHTML="hello"
+    first_div.style.backgroundColor = 'red';
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>dom document</h2>
+    <p id="intro">
+        A Computer Science portal.
+    </p>
+    <p>
+        This example illustrates the <b>getElementById</b> method.
+    </p>
+    <p id="demo"></p>
+    <script>
+        const element = document.getElementById("intro");
+        document.getElementById("demo").innerHTML =
+            "introduction is: " + element.innerHTML;
+    </script>
+
+</body>
+</html> -->/
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+</body>
+</html> -->
