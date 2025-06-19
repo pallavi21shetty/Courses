@@ -335,3 +335,20 @@ console.log(isAutomorphic(5));
 console.log(isAutomorphic(6));    
 console.log(isAutomorphic(76));   
 console.log(isAutomorphic(25));   
+
+
+//25
+function flattenArray(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      result = result.concat(flattenArray(arr[i])); // Recursive step
+    } else {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+}
+console.log(flattenArray([1, [2, [3, 4]], 5,[6,7,9]]));

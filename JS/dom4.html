@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation</title>
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 400px;
+      margin: 50px auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    #submitBtn {
+      display: none;
+      margin-top: 20px;
+    }
+    #message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>User Info Form</h2>
+  <form id="userForm">
+    <label>
+      Name:
+      <input type="text" id="name" required>
+    </label>
+
+    <label>
+      Email:
+      <input type="email" id="email" required>
+    </label>
+
+    <label>Is the information correct?</label>
+    <label><input type="radio" name="confirm" value="yes"> Yes</label>
+    <label><input type="radio" name="confirm" value="no"> No</label>
+
+    <button type="submit" id="submitBtn">Submit</button>
+    <div id="message"></div>
+  </form>
+
+  <script>
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const radioButtons = document.getElementsByName('confirm');
+    const submitBtn = document.getElementById('submitBtn');
+    const message = document.getElementById('message');
+
+    function checkFormValidity() {
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const radioSelected = Array.from(radioButtons).some(r => r.checked);
+
+      if (name !== "" && email !== "" && radioSelected) {
+        submitBtn.style.display = "block";
+      } else {
+        submitBtn.style.display = "none";
+      }
+    }
+
+    nameInput.addEventListener('input', checkFormValidity);
+    emailInput.addEventListener('input', checkFormValidity);
+    radioButtons.forEach(r => r.addEventListener('change', checkFormValidity));
+
+    document.getElementById('userForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent actual form submission
+
+  // Find which radio is selected
+  const selectedRadio = Array.from(radioButtons).find(r => r.checked);
+
+  if (selectedRadio && selectedRadio.value === "yes") {
+    message.textContent = "Submitted successfully!";
+  } else {
+    message.textContent = "Please enter valid information.";
+  }
+
+  submitBtn.style.display = "none"; // Hide submit button after response
+});
+
+  </script>
+</body>
+</html>
