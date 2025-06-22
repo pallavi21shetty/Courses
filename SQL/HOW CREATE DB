@@ -1,0 +1,172 @@
+to show existing database
+    show databases;
+
+
+
+to create database
+    create database <db_name>;
+
+
+to delete database
+        drop database <db_name>;
+
+
+using the database
+            use <db_name>;
+
+
+to see the tables in database
+                show tables;
+
+
+
+create table
+     create table table_name(
+        columnname1 datatype,
+        .
+        .
+        .
+     ) ;  
+
+     create table users(
+    user_id int auto_increment primary key,
+    user_name varchar(100) not null,
+    email varchar(100) not null unique,
+    password varchar(255) not null,
+    created_at timestamp default current_timestamp
+);       
+
+to describe the table
+    describe table_name;
+
+
+insert the data in table
+    insert into users(user_name, email, password) values
+    ('john doe', 'john@example.com', 'password123'),
+    ('jane smith', 'jane@example.com', 'password');
+
+read table
+    select column1 column2 from table_name where condition;
+    select * from users;
+
+
+update table
+    update table_name set column1=value1 .... where condition;
+
+
+delete table
+    drop table table_name;
+
+
+    <!-- mysql>   show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
+| todo_app           |
++--------------------+
+6 rows in set (0.01 sec)
+
+mysql> create database test2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>   show databases;     
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
+| test2              |
+| todo_app           |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> drop database test2;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql>   show databases;   
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
+| todo_app           |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use test;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_test |
++----------------+
+| user           |
++----------------+
+1 row in set (0.02 sec)
+
+mysql> create database test2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use test2;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table users(
+    ->     user_id int auto_increment primary key,
+    ->     user_name varchar(100) not null,
+    ->     email varchar(100) not null unique,
+    ->     password varchar(255) not null,
+    ->     created_at timestamp default current_timestamp
+    -> );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> show tables;       
++-----------------+
+| Tables_in_test2 |
++-----------------+
+| users           |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from users;
+Empty set (0.01 sec)
+
+mysql> insert into users(user_name, email, password) values
+    -> ('john doe', 'john@example.com', 'password123'),
+    -> ('jane smith', 'jane@example.com', 'password');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from users;
++---------+------------+------------------+-------------+---------------------+
+| user_id | user_name  | email            | password    | created_at          |
++---------+------------+------------------+-------------+---------------------+
+|       1 | john doe   | john@example.com | password123 | 2025-06-21 12:57:56 |
+|       2 | jane smith | jane@example.com | password    | 2025-06-21 12:57:56 |
++---------+------------+------------------+-------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> describe user;
+ERROR 1146 (42S02): Table 'test2.user' doesn't exist
+mysql> describe users;
++------------+--------------+------+-----+-------------------+-------------------+
+| Field      | Type         | Null | Key | Default           | Extra             |
++------------+--------------+------+-----+-------------------+-------------------+
+| user_id    | int          | NO   | PRI | NULL              | auto_increment    |
+| user_name  | varchar(100) | NO   |     | NULL              |                   |
+| email      | varchar(100) | NO   | UNI | NULL              |                   |
+                |
+| created_at | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
++------------+--------------+------+-----+-------------------+-------------------+
+5 rows in set (0.01 sec) -->
