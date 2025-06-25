@@ -352,3 +352,18 @@ function flattenArray(arr) {
   return result;
 }
 console.log(flattenArray([1, [2, [3, 4]], 5,[6,7,9]]));
+
+//28
+// function flattenArray(arr) {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let current = arr[i];
+//     if (Array.isArray(current)) {
+//       result = result.concat(flattenArray(current.slice()));
+//     } else {
+//       result.push(current);
+//     }
+//   }
+//   return result;
+// }
+// console.log(flattenArray([1, [2, [3, 4]], 5]));
