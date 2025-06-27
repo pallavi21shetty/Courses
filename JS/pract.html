@@ -1,0 +1,209 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <style>
+        div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h2 {
+            color: black;
+        }
+        #grandparent {
+            background-color: green;
+            width: 300px;
+            height: 300px;
+        }
+        #parent {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        #child {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome To GFG</h2>
+        <div id="grandparent">GrandParent
+            <div id="parent">Parent
+                <div id="child">Child</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const grandParent = document.getElementById("grandparent");
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        grandParent.addEventListener("click", (e) => {
+            console.log("GrandParent");
+        }, { capture: false });
+        parent.addEventListener("click", (e) => {
+            console.log("Parent");
+        }, { capture: false });
+        child.addEventListener("click", (e) => {
+            console.log("Child");
+        }, { capture: false });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #div1 {
+            background-color: lightgreen;
+            padding: 24px;
+            border: 1px solid black;
+        }
+
+        #div2 {
+            background-color: yellow;
+            padding: 18px;
+            border: 1px solid black;
+
+        }
+
+        #div3 {
+            background-color: orange;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: green">GeeksForGeeks</h1>
+    <h3>What is Event propagation, capturing, bubbling?</h3>
+
+    <div id="div1">
+        Component 1
+        <div id="div2">
+            component 2
+            <div id="div3">
+                component 3
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let div1 = document.querySelector("#div1");
+        let div2 = document.querySelector("#div2");
+        let div3 = document.querySelector("#div3");
+
+        div1.addEventListener("click", function (event) {
+            alert("Component 1 event clicked");
+        });
+
+        div2.addEventListener("click", function (event) {
+            alert("Component 2 event clicked");
+        });
+
+        div3.addEventListener("click", function (event) {
+            alert("Component 3 event clicked");
+        });
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #div1 {
+            background-color: lightgreen;
+            padding: 24px;
+            border: 1px solid black;
+        }
+
+        #div2 {
+            background-color: yellow;
+            padding: 18px;
+            border: 1px solid black;
+
+        }
+
+        #div3 {
+            background-color: orange;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: green">GeeksForGeeks</h1>
+    <h3>What is Event propagation, capturing, bubbling?</h3>
+
+    <div id="div1">
+        Component 1
+        <div id="div2">
+            component 2
+            <div id="div3">
+                component 3
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript code for event capturing -->
+    <script>
+        let div1 = document.querySelector("#div1");
+        let div2 = document.querySelector("#div2");
+        let div3 = document.querySelector("#div3");
+
+        div1.addEventListener("click", function (event) {
+            alert("Component 1 event clicked");
+        }, true);
+
+        div2.addEventListener("click", function (event) {
+            alert("Component 2 event clicked");
+        }, true);
+
+        div3.addEventListener("click", function (event) {
+            alert("Component 3 event clicked");
+        }, true);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
