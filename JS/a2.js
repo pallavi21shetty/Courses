@@ -130,6 +130,20 @@
 // removevowel("pallavi")
 
 
+//10 remove vowel
+// function removevowel(str){
+//     let result  =""
+//     let vowel= "aeiouAEIOU"
+//     for (let i=0;i<str.length;i++){
+//         if(!vowel.includes(str[i])){
+//             result=result+str[i];
+//         }
+//     }
+//   return result
+    
+// }
+// console.log(removevowel("pallavi"))
+
 //11 count vowel
 // function removevowel(str){
 //     let vowel= "aeiouAEIOU"
@@ -318,40 +332,40 @@
 
 
 //24
-function isAutomorphic(num) {
-  let square = num * num;
-  let temp = num;
-  while (temp > 0) {
-    if (temp % 10 !== square % 10) {
-      return false;
-    }
-    temp = Math.floor(temp / 10);
-    square = Math.floor(square / 10);
-  }
+// function isAutomorphic(num) {
+//   let square = num * num;
+//   let temp = num;
+//   while (temp > 0) {
+//     if (temp % 10 !== square % 10) {
+//       return false;
+//     }
+//     temp = Math.floor(temp / 10);
+//     square = Math.floor(square / 10);
+//   }
 
-  return true;
-}
-console.log(isAutomorphic(5));    
-console.log(isAutomorphic(6));    
-console.log(isAutomorphic(76));   
-console.log(isAutomorphic(25));   
+//   return true;
+// }
+// console.log(isAutomorphic(5));    
+// console.log(isAutomorphic(6));    
+// console.log(isAutomorphic(76));   
+// console.log(isAutomorphic(25));   
 
 
 //25
-function flattenArray(arr) {
-  let result = [];
+// function flattenArray(arr) {
+//   let result = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-      result = result.concat(flattenArray(arr[i])); // Recursive step
-    } else {
-      result.push(arr[i]);
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//       result = result.concat(flattenArray(arr[i])); // Recursive step
+//     } else {
+//       result.push(arr[i]);
+//     }
+//   }
 
-  return result;
-}
-console.log(flattenArray([1, [2, [3, 4]], 5,[6,7,9]]));
+//   return result;
+// }
+// console.log(flattenArray([1, [2, [3, 4]], 5,[6,7,9]]));
 
 //28
 // function flattenArray(arr) {
@@ -367,3 +381,86 @@ console.log(flattenArray([1, [2, [3, 4]], 5,[6,7,9]]));
 //   return result;
 // }
 // console.log(flattenArray([1, [2, [3, 4]], 5]));
+
+
+// 29. reverse number
+// function reverseNumber(num) {
+//   let reversed = 0;
+
+//   while (num > 0) {
+//     let digit = num % 10;           
+//     reversed = reversed * 10 + digit; 
+//     num = Math.floor(num / 10);     
+//   }
+//   return reversed;
+// }
+// console.log(reverseNumber(1002));
+
+
+//30. palindrome num
+// function isPalindrome(num) {
+//   let original = num;
+//   let reversed = 0;
+//   while (num > 0) {
+//     let digit = num % 10;
+//     reversed = reversed * 10 + digit;
+//     num = Math.floor(num / 10);
+//   }
+//   return original === reversed;
+// }
+// console.log(isPalindrome(123));   
+// console.log(isPalindrome(1001)); 
+
+
+// 31. Find the Maximum Number in an Array
+// function findMax(arr) {
+//   return Math.max(...arr);
+// }
+// let result = findMax([10, 25, 7, 99, 4]);
+// console.log("Max value is:", result);
+
+
+//32 largest no in array
+// function findLargest(arr) {
+//   if (arr.length === 0) return null; 
+//   let max = arr[0]; 
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// console.log(findLargest([10, 25, 3, 99, 42]));   
+
+
+//33 second largest
+// function findSecondLargest(arr) {
+//   if (arr.length < 2) return null; 
+//   let largest = -Infinity;
+//   let secondLargest = -Infinity;
+//   for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
+//     if (num > largest) {
+//       secondLargest = largest;
+//       largest = num;
+//     } else if (num > secondLargest && num < largest) {
+//       secondLargest = num;
+//     }
+//   }
+//   return secondLargest === -Infinity ? null : secondLargest;
+// }
+// console.log(findSecondLargest([100,100])); 
+
+
+
+//  34. Count the Frequency of Each Element in an Array
+function countFrequency(arr) {
+  const freq = {};
+  for (let item of arr) {
+    freq[item] = (freq[item] || 0) + 1;
+  }
+  return freq;
+}
+let result = countFrequency([2,5,6,2,44,2,7,44,99])
+console.log(result);
