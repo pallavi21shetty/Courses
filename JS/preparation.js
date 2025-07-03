@@ -52,13 +52,110 @@
 
 
 
-function* asyncTask() {
-    console.log('Task 1');
-    yield new Promise(resolve =>
-        setTimeout(() =>
-            resolve('Task 2'), 1000));
-    console.log('Task 3');
-}
-const task = asyncTask();
-task.next().value.then(console.log);
-task.next(); 
+// function* asyncTask() {
+//     console.log('Task 1');
+//     yield new Promise(resolve =>
+//         setTimeout(() =>
+//             resolve('Task 2'), 1000));
+//     console.log('Task 3');
+// }
+// const task = asyncTask();
+// task.next().value.then(console.log);
+// task.next(); 
+
+
+
+// const person = {
+//  name: 'John Doe',
+//  age: 30,
+//  gender: 'male',
+//  isStudent: true,
+//  address: {
+//    city: 'New York',
+//    country: 'USA'
+//    },
+//  sayHello: function() {
+//    console.log('Hello!');
+//    }
+// };
+// console.log(person.name); 
+// console.log(person.age); 
+// console.log(person.address.city); 
+// person.sayHello(); 
+// person.age = 31;
+// person.isStudent = false;
+// person.address.country = 'Canada';
+
+
+// const rectangle = {
+//  width: 10,
+//  height: 5,
+//  calculateArea: function() {
+//  return this.width * this.height;
+//  }
+// };
+// console.log(rectangle.calculateArea());
+
+
+// function createPerson(name, age) {
+//   return {
+//     name,
+//     age,
+//     greet() {
+//       console.log(`Hello, I am ${this.name} and I am ${this.age} years old.`);
+//     }
+//   };
+// }
+// const person1 = createPerson('Leohang', 23);
+// const person2 = createPerson('Anup', 24);
+// person1.greet(); // Hello, I am Leohang and I am 23 years old.
+// person2.greet(); // Hello, I am Anup and I am 24 years old.
+
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.greet = function () {
+//     console.log(`Hello, I am ${this.name} and I am ${this.age} years old.`);
+//   };
+// }
+// const person1 = new Person(‘Leohang Rai’, 23);
+// const person2 = new Person(‘Anup Rai’, 24);
+// person1.greet(); // Hello, I am Leohang Rai and I am 23 years old.
+// person2.greet(); // Hello, I am Anup Rai and I am 24 years old.
+
+
+
+
+
+
+// var pokemon = {
+//     firstname: 'Pika',
+//     lastname: 'Chu ',
+//     getPokeName: function() {
+//         var fullname = this.firstname + ' ' + this.lastname;
+//         return fullname;
+//     }
+// };
+// var pokemonName = function() {
+//     console.log(this.getPokeName() + 'I choose you!');
+// };
+// var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+// logPokemon(); 
+
+
+
+// var pokemon = {
+//     firstname: 'Pika',
+//     lastname: 'Chu ',
+//     getPokeName: function() {
+//         var fullname = this.firstname + ' ' + this.lastname;
+//         return fullname;
+//     }
+// };
+// var pokemonName = function(snack, hobby) {
+//     console.log(this.getPokeName() + 'I choose you!');
+//     console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+// };
+// var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+// logPokemon('sushi', 'algorithms');
