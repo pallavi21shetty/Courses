@@ -159,3 +159,13 @@
 // };
 // var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
 // logPokemon('sushi', 'algorithms');
+
+
+let str="pallavi shetty";
+console.log(str.split(" "));
+
+let str1="pallavi shetty";
+console.log(str1.split());
+
+let str2="pallavi shetty";
+console.log(str2.split(""));
