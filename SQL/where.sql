@@ -34,9 +34,6 @@ insert the data in table
 
 
 
-
-
-
 mysql> use world;
 Database changed
 
@@ -297,3 +294,165 @@ mysql> select * from users;
 |       3 | rahul     | rahul2@gmail.com | password123 | 2025-07-04 15:53:15 |
 +---------+-----------+------------------+-------------+---------------------+
 2 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+mysql> CREATE TABLE users (
+    ->   id INT PRIMARY KEY,
+    ->   email VARCHAR(100) UNIQUE
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desribe users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desribe users' at line 1
+mysql> describe users;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int          | NO   | PRI | NULL    |       |
+| email | varchar(100) | YES  | UNI | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO users (id, email) VALUES (1, 'pallavi@example.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO users (id, email) VALUES (2, NULL);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO users (id, email) VALUES (3, NULL);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----+---------------------+
+| id | email               |
++----+---------------------+
+|  2 | NULL                |
+|  3 | NULL                |
+|  1 | pallavi@example.com |
++----+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from users;
++----+---------------------+
+| id | email               |
++----+---------------------+
+|  2 | NULL                |
+|  3 | NULL                |
+|  1 | pallavi@example.com |
++----+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO users (id, email) VALUES (3);      
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO users (id, email) VALUES (3,'');
+ERROR 1062 (23000): Duplicate entry '3' for key 'users.PRIMARY'
+mysql> INSERT INTO users (id, email) VALUES (4,'');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from users;                        
++----+---------------------+
+| id | email               |
++----+---------------------+
+|  2 | NULL                |
+|  3 | NULL                |
+|  4 |                     |
+|  1 | pallavi@example.com |
++----+---------------------+
+4 rows in set (0.01 sec)
+
+mysql> INSERT INTO users (id, email) VALUES (5,'');
+ERROR 1062 (23000): Duplicate entry '' for key 'users.email'
+
+
+
+
+
+
+
+
+mysql> drop table users;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> CREATE TABLE users (
+    ->   id INT PRIMARY KEY,
+    ->   email VARCHAR(100) UNIQUE
+    -> , name varchar(30) not null);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> describe users;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int          | NO   | PRI | NULL    |       |
+| email | varchar(100) | YES  | UNI | NULL    |       |
+| name  | varchar(30)  | NO   |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+mysql> INSERT INTO users (id, email,name) VALUES (1, 'pallavi@example.com','pallavi');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO users (id, email,name) VALUES ('', 'pallavi12@example.com','pallavi');
+ERROR 1366 (HY000): Incorrect integer value: '' for column 'id' at row 1
+mysql> INSERT INTO users (id, email,name) VALUES ( , 'pallavi12@example.com','pallavi'); 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', 'pallavi12@example.com','pallavi')' at line 1
+mysql> INSERT INTO users (id, email,name) VALUES (2, 'pallavi12@example.com',' ');       
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----+-----------------------+---------+
+| id | email                 | name    |
++----+-----------------------+---------+
+|  1 | pallavi@example.com   | pallavi |
+|  2 | pallavi12@example.com |         |
++----+-----------------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO users (id, email,name) VALUES (3, 'pavi12@example.com',' ');   
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----+-----------------------+---------+
+| id | email                 | name    |
++----+-----------------------+---------+
+|  1 | pallavi@example.com   | pallavi |
+|  2 | pallavi12@example.com |         |
+|  3 | pavi12@example.com    |         |
++----+-----------------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO users (id, email,name) VALUES (4, 'arun@example.com',null);     
+ERROR 1048 (23000): Column 'name' cannot be null
+
+
+
+
+
+mysql> INSERT INTO users (id, email,name) VALUES (5, ' ','kiran ');                   
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO users (id, email,name) VALUES (6, ' ','kiran ');  
+ERROR 1062 (23000): Duplicate entry ' ' for key 'users.email'
+mysql> INSERT INTO users (id, email,name) VALUES (6, '   ','kiran ');  
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++----+-----------------------+---------+
+| id | email                 | name    |
++----+-----------------------+---------+
+|  1 | pallavi@example.com   | pallavi |
+|  2 | pallavi12@example.com |         |
+|  3 | pavi12@example.com    |         |
+|  5 |                       | kiran   |
+|  6 |                       | kiran   |
++----+-----------------------+---------+
+5 rows in set (0.00 sec)

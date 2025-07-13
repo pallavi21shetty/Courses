@@ -455,12 +455,61 @@
 
 
 //  34. Count the Frequency of Each Element in an Array
-function countFrequency(arr) {
-  const freq = {};
-  for (let item of arr) {
-    freq[item] = (freq[item] || 0) + 1;
-  }
-  return freq;
-}
-let result = countFrequency([2,5,6,2,44,2,7,44,99])
-console.log(result);
+// function countFrequency(arr) {
+//   const freq = {};
+//   for (let item of arr) {
+//     freq[item] = (freq[item] || 0) + 1;
+//   }
+//   return freq;
+// }
+// let result = countFrequency([2,5,6,2,44,2,7,44,99])
+// console.log(result);
+
+
+// 35. sorting without use sort()
+// function bubbleSort(arr) {
+//   let n = arr.length;
+//   for (let i = 0; i < n - 1; i++) {
+//     for (let j = 0; j < n - 1 - i; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// }
+// console.log(bubbleSort([10, 2, 5, 1])); 
+
+
+//36 sort using hof
+// let nums = [20, 4, 10, 100, 5];
+// nums.sort((a, b) => a - b);
+// console.log("Ascending:", nums); 
+
+// nums.sort((a, b) => b - a);
+// console.log("Descending:", nums);
+
+// let names = ["banana", "apple", "cherry"];
+// names.sort();
+// console.log(names);
+
+
+// 37 take two number and swap it without using third num
+// let a = 8;
+// let b = 5;
+// a = a + b; 
+// b = a - b; 
+// a = a - b; 
+// console.log("a =", a);
+// console.log("b =", b);
+
+
+let a = 5;
+let b = 10;
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+console.log("a =", a);
+console.log("b =", b); 
