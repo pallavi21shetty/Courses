@@ -353,6 +353,488 @@ mysql> select country.code,country.name, (select count(*) from city where Countr
 +------+----------------------------------------------+---------------+
 239 rows in set (0.01 sec)
 
+mysql> select CountryCode, count(*) as num_of_citys from city group by CountryCode;
++-------------+--------------+
+| CountryCode | num_of_citys |
++-------------+--------------+
+| ABW         |            1 |
+| AFG         |            4 |
+| AGO         |            5 |
+| AIA         |            2 |
+| ALB         |            1 |
+| AND         |            1 |
+| ANT         |            1 |
+| ARE         |            5 |
+| ARG         |           57 |
+| ARM         |            3 |
+| ASM         |            2 |
+| ATG         |            1 |
+| AUS         |           14 |
+| AUT         |            6 |
+| AZE         |            4 |
+| BDI         |            1 |
+| BEL         |            9 |
+| BEN         |            4 |
+| BFA         |            3 |
+| BGD         |           24 |
+| BGR         |           10 |
+| BHR         |            1 |
+| BHS         |            1 |
+| BIH         |            3 |
+| BLR         |           16 |
+| BLZ         |            2 |
+| BMU         |            2 |
+| BOL         |            8 |
+| BRA         |          250 |
+| BRB         |            1 |
+| BRN         |            1 |
+| BTN         |            1 |
+| BWA         |            2 |
+| CAF         |            1 |
+| CAN         |           49 |
+| CCK         |            2 |
+| CHE         |            5 |
+| CHL         |           29 |
+| CHN         |          363 |
+| CIV         |            5 |
+| CMR         |            7 |
+| COD         |           18 |
+| COG         |            2 |
+| COK         |            1 |
+| COL         |           38 |
+| COM         |            1 |
+| CPV         |            1 |
+| CRI         |            1 |
+| CUB         |           14 |
+| CXR         |            1 |
+| CYM         |            1 |
+| CYP         |            2 |
+| CZE         |           10 |
+| DEU         |           93 |
+| DJI         |            1 |
+| DMA         |            1 |
+| DNK         |            5 |
+| DOM         |            6 |
+| DZA         |           18 |
+| ECU         |           15 |
+| EGY         |           37 |
+| ERI         |            1 |
+| ESH         |            1 |
+| ESP         |           59 |
+| EST         |            2 |
+| ETH         |            7 |
+| FIN         |            7 |
+| FJI         |            1 |
+| FLK         |            1 |
+| FRA         |           40 |
+| FRO         |            1 |
+| FSM         |            2 |
+| GAB         |            1 |
+| GBR         |           81 |
+| GEO         |            5 |
+| GHA         |            5 |
+| GIB         |            1 |
+| GIN         |            1 |
+| GLP         |            2 |
+| GMB         |            2 |
+| GNB         |            1 |
+| GNQ         |            1 |
+| GRC         |            8 |
+| GRD         |            1 |
+| GRL         |            1 |
+| GTM         |            4 |
+| GUF         |            1 |
+| GUM         |            2 |
+| GUY         |            1 |
+| HKG         |            2 |
+| HND         |            3 |
+| HRV         |            4 |
+| HTI         |            4 |
+| HUN         |            9 |
+| IDN         |           85 |
+| IND         |          341 |
+| IRL         |            2 |
+| IRN         |           67 |
+| IRQ         |           15 |
+| ISL         |            1 |
+| ISR         |           14 |
+| ITA         |           58 |
+| JAM         |            3 |
+| JOR         |            5 |
+| JPN         |          248 |
+| KAZ         |           21 |
+| KEN         |            8 |
+| KGZ         |            2 |
+| KHM         |            3 |
+| KIR         |            2 |
+| KNA         |            1 |
+| KOR         |           70 |
+| KWT         |            3 |
+| LAO         |            2 |
+| LBN         |            2 |
+| LBR         |            1 |
+| LBY         |            4 |
+| LCA         |            1 |
+| LIE         |            2 |
+| LKA         |            7 |
+| LSO         |            1 |
+| LTU         |            5 |
+| LUX         |            1 |
+| LVA         |            3 |
+| MAC         |            1 |
+| MAR         |           22 |
+| MCO         |            2 |
+| MDA         |            4 |
+| MDG         |            5 |
+| MDV         |            1 |
+| MEX         |          173 |
+| MHL         |            1 |
+| MKD         |            1 |
+| MLI         |            1 |
+| MLT         |            2 |
+| MMR         |           16 |
+| MNG         |            1 |
+| MNP         |            1 |
+| MOZ         |           12 |
+| MRT         |            2 |
+| MSR         |            1 |
+| MTQ         |            1 |
+| MUS         |            3 |
+| MWI         |            2 |
+| MYS         |           18 |
+| MYT         |            1 |
+| NAM         |            1 |
+| NCL         |            1 |
+| NER         |            3 |
+| NFK         |            1 |
+| NGA         |           64 |
+| NIC         |            4 |
+| NIU         |            1 |
+| NLD         |           28 |
+| NOR         |            5 |
+| NPL         |            5 |
+| NRU         |            2 |
+| NZL         |            9 |
+| OMN         |            5 |
+| PAK         |           59 |
+| PAN         |            2 |
+| PCN         |            1 |
+| PER         |           22 |
+| PHL         |          136 |
+| PLW         |            1 |
+| PNG         |            1 |
+| POL         |           44 |
+| PRI         |            9 |
+| PRK         |           13 |
+| PRT         |            5 |
+| PRY         |            5 |
+| PSE         |            6 |
+| PYF         |            2 |
+| QAT         |            1 |
+| REU         |            1 |
+| ROM         |           29 |
+| RUS         |          189 |
+| RWA         |            1 |
+| SAU         |           24 |
+| SDN         |           12 |
+| SEN         |            9 |
+| SGP         |            1 |
+| SHN         |            1 |
+| SJM         |            1 |
+| SLB         |            1 |
+| SLE         |            1 |
+| SLV         |            7 |
+| SMR         |            2 |
+| SOM         |            3 |
+| SPM         |            1 |
+| STP         |            1 |
+| SUR         |            1 |
+| SVK         |            3 |
+| SVN         |            2 |
+| SWE         |           15 |
+| SWZ         |            1 |
+| SYC         |            1 |
+| SYR         |           11 |
+| TCA         |            1 |
+| TCD         |            2 |
+| TGO         |            1 |
+| THA         |           12 |
+| TJK         |            2 |
+| TKL         |            1 |
+| TKM         |            4 |
+| TMP         |            1 |
+| TON         |            1 |
+| TTO         |            2 |
+| TUN         |            8 |
+| TUR         |           62 |
+| TUV         |            1 |
+| TWN         |           42 |
+| TZA         |           10 |
+| UGA         |            1 |
+| UKR         |           57 |
+| URY         |            1 |
+| USA         |          274 |
+| UZB         |           17 |
+| VAT         |            1 |
+| VCT         |            1 |
+| VEN         |           41 |
+| VGB         |            1 |
+| VIR         |            1 |
+| VNM         |           22 |
+| VUT         |            1 |
+| WLF         |            1 |
+| WSM         |            1 |
+| YEM         |            6 |
+| YUG         |            8 |
+| ZAF         |           44 |
+| ZMB         |            7 |
+| ZWE         |            6 |
++-------------+--------------+
+232 rows in set (0.01 sec)
+
+mysql> select CountryCode, name, count(*) as num_of_citys from city group by CountryCode;
+ERROR 1055 (42000): Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'world.city.Name' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+mysql> SELECT CountryCode, MIN(name) AS example_city, COUNT(*) AS num_of_citys
+    -> FROM city
+    -> GROUP BY CountryCode;
++-------------+-----------------------------------+--------------+
+| CountryCode | example_city                      | num_of_citys |
++-------------+-----------------------------------+--------------+
+| ABW         | Oranjestad                        |            1 |
+| AFG         | Herat                             |            4 |
+| AGO         | Benguela                          |            5 |
+| AIA         | South Hill                        |            2 |
+| ALB         | Tirana                            |            1 |
+| AND         | Andorra la Vella                  |            1 |
+| ANT         | Willemstad                        |            1 |
+| ARE         | Abu Dhabi                         |            5 |
+| ARG         | Almirante Brown                   |           57 |
+| ARM         | Gjumri                            |            3 |
+| ASM         | Fagatogo                          |            2 |
+| ATG         | Saint John´s                      |            1 |
+| AUS         | Adelaide                          |           14 |
+| AUT         | Graz                              |            6 |
+| AZE         | Bakı                              |            4 |
+| BDI         | Bujumbura                         |            1 |
+| BEL         | Antwerpen                         |            9 |
+| BEN         | Cotonou                           |            4 |
+| BFA         | Bobo-Dioulasso                    |            3 |
+| BGD         | Barisal                           |           24 |
+| BGR         | Burgas                            |           10 |
+| BHR         | al-Manama                         |            1 |
+| BHS         | Nassau                            |            1 |
+| BIH         | Banja Luka                        |            3 |
+| BLR         | Baranovit?i                       |           16 |
+| BLZ         | Belize City                       |            2 |
+| BMU         | Hamilton                          |            2 |
+| BOL         | Cochabamba                        |            8 |
+| BRA         | Abaetetuba                        |          250 |
+| BRB         | Bridgetown                        |            1 |
+| BRN         | Bandar Seri Begawan               |            1 |
+| BTN         | Thimphu                           |            1 |
+| BWA         | Francistown                       |            2 |
+| CAF         | Bangui                            |            1 |
+| CAN         | Abbotsford                        |           49 |
+| CCK         | Bantam                            |            2 |
+| CHE         | Basel                             |            5 |
+| CHL         | Antofagasta                       |           29 |
+| CHN         | Acheng                            |          363 |
+| CIV         | Abidjan                           |            5 |
+| CMR         | Bafoussam                         |            7 |
+| COD         | Boma                              |           18 |
+| COG         | Brazzaville                       |            2 |
+| COK         | Avarua                            |            1 |
+| COL         | Armenia                           |           38 |
+| COM         | Moroni                            |            1 |
+| CPV         | Praia                             |            1 |
+| CRI         | San José                          |            1 |
+| CUB         | Bayamo                            |           14 |
+| CXR         | Flying Fish Cove                  |            1 |
+| CYM         | George Town                       |            1 |
+| CYP         | Limassol                          |            2 |
+| CZE         | Brno                              |           10 |
+| DEU         | Aachen                            |           93 |
+| DJI         | Djibouti                          |            1 |
+| DMA         | Roseau                            |            1 |
+| DNK         | Aalborg                           |            5 |
+| DOM         | La Romana                         |            6 |
+| DZA         | Alger                             |           18 |
+| ECU         | Ambato                            |           15 |
+| EGY         | al-Arish                          |           37 |
+| ERI         | Asmara                            |            1 |
+| ESH         | El-Aaiún                          |            1 |
+| ESP         | [San Cristóbal de] la Laguna      |           59 |
+| EST         | Tallinn                           |            2 |
+| ETH         | Addis Abeba                       |            7 |
+| FIN         | Espoo                             |            7 |
+| FJI         | Suva                              |            1 |
+| FLK         | Stanley                           |            1 |
+| FRA         | Aix-en-Provence                   |           40 |
+| FRO         | Tórshavn                          |            1 |
+| FSM         | Palikir                           |            2 |
+| GAB         | Libreville                        |            1 |
+| GBR         | Aberdeen                          |           81 |
+| GEO         | Batumi                            |            5 |
+| GHA         | Accra                             |            5 |
+| GIB         | Gibraltar                         |            1 |
+| GIN         | Conakry                           |            1 |
+| GLP         | Basse-Terre                       |            2 |
+| GMB         | Banjul                            |            2 |
+| GNB         | Bissau                            |            1 |
+| GNQ         | Malabo                            |            1 |
+| GRC         | Athenai                           |            8 |
+| GRD         | Saint George´s                    |            1 |
+| GRL         | Nuuk                              |            1 |
+| GTM         | Ciudad de Guatemala               |            4 |
+| GUF         | Cayenne                           |            1 |
+| GUM         | Agaña                             |            2 |
+| GUY         | Georgetown                        |            1 |
+| HKG         | Kowloon and New Kowloon           |            2 |
+| HND         | La Ceiba                          |            3 |
+| HRV         | Osijek                            |            4 |
+| HTI         | Carrefour                         |            4 |
+| HUN         | Budapest                          |            9 |
+| IDN         | Ambon                             |           85 |
+| IND         | Abohar                            |          341 |
+| IRL         | Cork                              |            2 |
+| IRN         | Abadan                            |           67 |
+| IRQ         | al-Amara                          |           15 |
+| ISL         | Reykjavík                         |            1 |
+| ISR         | Ashdod                            |           14 |
+| ITA         | Alessandria                       |           58 |
+| JAM         | Kingston                          |            3 |
+| JOR         | al-Rusayfa                        |            5 |
+| JPN         | Abiko                             |          248 |
+| KAZ         | Almaty                            |           21 |
+| KEN         | Eldoret                           |            8 |
+| KGZ         | Bishkek                           |            2 |
+| KHM         | Battambang                        |            3 |
+| KIR         | Bairiki                           |            2 |
+| KNA         | Basseterre                        |            1 |
+| KOR         | Andong                            |           70 |
+| KWT         | al-Salimiya                       |            3 |
+| LAO         | Savannakhet                       |            2 |
+| LBN         | Beirut                            |            2 |
+| LBR         | Monrovia                          |            1 |
+| LBY         | al-Zawiya                         |            4 |
+| LCA         | Castries                          |            1 |
+| LIE         | Schaan                            |            2 |
+| LKA         | Colombo                           |            7 |
+| LSO         | Maseru                            |            1 |
+| LTU         | Kaunas                            |            5 |
+| LUX         | Luxembourg [Luxemburg/Lëtzebuerg] |            1 |
+| LVA         | Daugavpils                        |            3 |
+| MAC         | Macao                             |            1 |
+| MAR         | Agadir                            |           22 |
+| MCO         | Monaco-Ville                      |            2 |
+| MDA         | Balti                             |            4 |
+| MDG         | Antananarivo                      |            5 |
+| MDV         | Male                              |            1 |
+| MEX         | Acámbaro                          |          173 |
+| MHL         | Dalap-Uliga-Darrit                |            1 |
+| MKD         | Skopje                            |            1 |
+| MLI         | Bamako                            |            1 |
+| MLT         | Birkirkara                        |            2 |
+| MMR         | Bassein (Pathein)                 |           16 |
+| MNG         | Ulan Bator                        |            1 |
+| MNP         | Garapan                           |            1 |
+| MOZ         | Beira                             |           12 |
+| MRT         | Nouâdhibou                        |            2 |
+| MSR         | Plymouth                          |            1 |
+| MTQ         | Fort-de-France                    |            1 |
+| MUS         | Beau Bassin-Rose Hill             |            3 |
+| MWI         | Blantyre                          |            2 |
+| MYS         | Alor Setar                        |           18 |
+| MYT         | Mamoutzou                         |            1 |
+| NAM         | Windhoek                          |            1 |
+| NCL         | Nouméa                            |            1 |
+| NER         | Maradi                            |            3 |
+| NFK         | Kingston                          |            1 |
+| NGA         | Aba                               |           64 |
+| NIC         | Chinandega                        |            4 |
+| NIU         | Alofi                             |            1 |
+| NLD         | ´s-Hertogenbosch                  |           28 |
+| NOR         | Bærum                             |            5 |
+| NPL         | Biratnagar                        |            5 |
+| NRU         | Yangor                            |            2 |
+| NZL         | Auckland                          |            9 |
+| OMN         | al-Sib                            |            5 |
+| PAK         | Abottabad                         |           59 |
+| PAN         | Ciudad de Panamá                  |            2 |
+| PCN         | Adamstown                         |            1 |
+| PER         | Arequipa                          |           22 |
+| PHL         | Angeles                           |          136 |
+| PLW         | Koror                             |            1 |
+| PNG         | Port Moresby                      |            1 |
+| POL         | Bialystok                         |           44 |
+| PRI         | Arecibo                           |            9 |
+| PRK         | Chongjin                          |           13 |
+| PRT         | Amadora                           |            5 |
+| PRY         | Asunción                          |            5 |
+| PSE         | Gaza                              |            6 |
+| PYF         | Faaa                              |            2 |
+| QAT         | Doha                              |            1 |
+| REU         | Saint-Denis                       |            1 |
+| ROM         | Arad                              |           29 |
+| RUS         | Abakan                            |          189 |
+| RWA         | Kigali                            |            1 |
+| SAU         | Abha                              |           24 |
+| SDN         | al-Fashir                         |           12 |
+| SEN         | Dakar                             |            9 |
+| SGP         | Singapore                         |            1 |
+| SHN         | Jamestown                         |            1 |
+| SJM         | Longyearbyen                      |            1 |
+| SLB         | Honiara                           |            1 |
+| SLE         | Freetown                          |            1 |
+| SLV         | Apopa                             |            7 |
+| SMR         | San Marino                        |            2 |
+| SOM         | Hargeysa                          |            3 |
+| SPM         | Saint-Pierre                      |            1 |
+| STP         | São Tomé                          |            1 |
+| SUR         | Paramaribo                        |            1 |
+| SVK         | Bratislava                        |            3 |
+| SVN         | Ljubljana                         |            2 |
+| SWE         | Borås                             |           15 |
+| SWZ         | Mbabane                           |            1 |
+| SYC         | Victoria                          |            1 |
+| SYR         | al-Qamishliya                     |           11 |
+| TCA         | Cockburn Town                     |            1 |
+| TCD         | Moundou                           |            2 |
+| TGO         | Lomé                              |            1 |
+| THA         | Bangkok                           |           12 |
+| TJK         | Dushanbe                          |            2 |
+| TKL         | Fakaofo                           |            1 |
+| TKM         | Ashgabat                          |            4 |
+| TMP         | Dili                              |            1 |
+| TON         | Nuku´alofa                        |            1 |
+| TTO         | Chaguanas                         |            2 |
+| TUN         | Ariana                            |            8 |
+| TUR         | Adana                             |           62 |
+| TUV         | Funafuti                          |            1 |
+| TWN         | Changhwa                          |           42 |
+| TZA         | Arusha                            |           10 |
+| UGA         | Kampala                           |            1 |
+| UKR         | Alt?evsk                          |           57 |
+| URY         | Montevideo                        |            1 |
+| USA         | Abilene                           |          274 |
+| UZB         | Andijon                           |           17 |
+| VAT         | Città del Vaticano                |            1 |
+| VCT         | Kingstown                         |            1 |
+| VEN         | Acarigua                          |           41 |
+| VGB         | Road Town                         |            1 |
+| VIR         | Charlotte Amalie                  |            1 |
+| VNM         | Biên Hoa                          |           22 |
+| VUT         | Port-Vila                         |            1 |
+| WLF         | Mata-Utu                          |            1 |
+| WSM         | Apia                              |            1 |
+| YEM         | Aden                              |            6 |
+| YUG         | Beograd                           |            8 |
+| ZAF         | Alberton                          |           44 |
+| ZMB         | Chingola                          |            7 |
+| ZWE         | Bulawayo                          |            6 |
++-------------+-----------------------------------+--------------+
+232 rows in set (0.01 sec)
+
 
 mysql> select * from countrylanguage  limit 10;                                                
 +-------------+------------+------------+------------+
