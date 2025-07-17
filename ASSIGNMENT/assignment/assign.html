@@ -1,0 +1,315 @@
+<!-- 19)	Create a TO-do list application add the functionlity to add,remove and edit make sure the application is responsive should have a good styling -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive To-Do List</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    input[type="text"] {
+      width: 75%;
+      padding: 10px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button.edit {
+      background-color: #ffc107;
+    }
+    button.delete {
+      background-color: #dc3545;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #f9f9f9;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .actions button {
+      margin-left: 5px;
+    }
+    @media (max-width: 600px) {
+      input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>To-Do List</h2>
+    <div>
+      <input type="text" id="taskInput" placeholder="Enter new task" />
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    function addTask() {
+      const taskInput = document.getElementById('taskInput');
+      const taskText = taskInput.value.trim();
+      if (taskText === '') return;
+
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.textContent = taskText;
+
+      const actions = document.createElement('div');
+      actions.className = 'actions';
+
+      const editBtn = document.createElement('button');
+      editBtn.textContent = 'Edit';
+      editBtn.className = 'edit';
+      editBtn.onclick = () => editTask(span);
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.className = 'delete';
+      deleteBtn.onclick = () => li.remove();
+
+      actions.appendChild(editBtn);
+      actions.appendChild(deleteBtn);
+
+      li.appendChild(span);
+      li.appendChild(actions);
+
+      document.getElementById('taskList').appendChild(li);
+      taskInput.value = '';
+    }
+
+    function editTask(span) {
+      const newTask = prompt('Edit task:', span.textContent);
+      if (newTask !== null) {
+        span.textContent = newTask.trim();
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!-- 20)	Fetch an Api and render few datas on the screen in table format -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeStore API Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #007bff;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Product List from FakeStore API</h2>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector('#productTable tbody');
+
+        for (let i = 0; i < data.length; i++) {
+          const product = data[i];
+          const row = document.createElement('tr');
+
+          const idCell = document.createElement('td');
+          idCell.textContent = product.id;
+
+          const titleCell = document.createElement('td');
+          titleCell.textContent = product.title;
+
+          const priceCell = document.createElement('td');
+          priceCell.textContent = `$${product.price}`;
+
+          const categoryCell = document.createElement('td');
+          categoryCell.textContent = product.category;
+
+          row.appendChild(idCell);
+          row.appendChild(titleCell);
+          row.appendChild(priceCell);
+          row.appendChild(categoryCell);
+
+          tbody.appendChild(row);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 21)	Create a simple search application and implement a debouncing functionality while searching -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debounced Search App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+      background: #f9f9f9;
+      margin-bottom: 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Debounced Search</h2>
+    <input type="text" id="searchInput" placeholder="Search fruits..." onkeyup="debouncedSearch()">
+    <ul id="resultList"></ul>
+  </div>
+
+  <script>
+    const fruits = ["Apple", "Banana", "Orange", "Grapes", "Strawberry", "Pineapple", "Kiwi", "Blueberry", "Mango", "Papaya"];
+
+    function search() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const results = fruits.filter(fruit => fruit.toLowerCase().includes(query));
+
+      const list = document.getElementById('resultList');
+      list.innerHTML = '';
+      results.forEach(fruit => {
+        const li = document.createElement('li');
+        li.textContent = fruit;
+        list.appendChild(li);
+      });
+    }
+
+    let debounceTimer;
+    function debouncedSearch() {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        search();
+      }, 300); // 300ms debounce delay
+    }
+  </script>
+</body>
+</html>
