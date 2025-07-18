@@ -35,8 +35,8 @@
 //     if (arr[i] > max) {
 //       max = arr[i];
 //     }
-//       if (arr[i] > max) {
-//       max = arr[i];
+//       if (arr[i] < min) {
+//       min = arr[i];
 //     }
 //   }
 //   return { min, max };
