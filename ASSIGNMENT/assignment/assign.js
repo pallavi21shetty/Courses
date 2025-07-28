@@ -755,30 +755,53 @@ console.log(generatePattern(5).join('\n'));
 
 
 //23)	Write a JavaScript program that takes an array like [1, 1, 2, 3, 3, 3] and returns an object where the keys are the elements and the values are the count of how many times each element appears
-function countFrequencies(arr) {
-  const count = {};
-  arr.forEach(num => {
-    count[num] = (count[num] || 0) + 1;
-  });
-  return count;
-}
-const input = [1, 1, 2, 3, 3, 3];
-console.log(countFrequencies(input));
+// function countFrequencies(arr) {
+//   const count = {};
+//   arr.forEach(num => {
+//     count[num] = (count[num] || 0) + 1;
+//   });
+//   return count;
+// }
+// const input = [1, 1, 2, 3, 3, 3];
+// console.log(countFrequencies(input));
 
 
-function countFrequenciesManual(arr) {
-  const count = {};
-  for (let i = 0; i < arr.length; i++) {
-    const val = arr[i];
-    if (count[val] === undefined) {
-      count[val] = 1;
-    } else {
-      count[val] = count[val] + 1;
-    }
+// function countFrequenciesManual(arr) {
+//   const count = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     const val = arr[i];
+//     if (count[val] === undefined) {
+//       count[val] = 1;
+//     } else {
+//       count[val] = count[val] + 1;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countFrequenciesManual([1, 1, 2, 3, 3, 3]));
+
+
+
+//fetch an api from fake stroe api using ajax method and render the data over the console
+const XMLHttpRequest = require('xhr2'); // Importing XMLHttpRequest
+
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "https://fakestoreapi.com/products", true); // Preparing GET request
+
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    const products = JSON.parse(xhr.responseText); // Parse the JSON response
+    console.log("Fetched Products from FakeStore API:");
+    products.forEach((product, index) => {
+      console.log(`${index + 1}. ${product.title} - $${product.price} [${product.category}]`);
+    });
+  } else {
+    console.log("Error:", xhr.status);
   }
-  return count;
-}
-console.log(countFrequenciesManual([1, 1, 2, 3, 3, 3]));
+};
 
+xhr.onerror = function () {
+  console.log("Request failed");
+};
 
-
+xhr.send(); // Send the request
