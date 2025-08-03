@@ -557,6 +557,22 @@ console.log(generatePattern(5).join('\n'));
 // console.log(original.y[2].z); 
 
 
+// let employee = {
+//     eid: "E102",
+//     ename: "Jack",
+//     eaddress: "New York",
+//     salary: 50000
+// }
+// console.log("=========Deep Copy========");
+// let newEmployee = JSON.parse(JSON.stringify(employee));
+// console.log("Employee=> ", employee);
+// console.log("New Employee=> ", newEmployee);
+// console.log("---------After modification---------");
+// newEmployee.ename = "Beck";
+// newEmployee.salary = 70000;
+// console.log("Employee=> ", employee);
+// console.log("New Employee=> ", newEmployee);
+
 
 
 // 15)	write a function to find how many times an elements are repeated in an array [1,2,3,3,5,2,1,7,6,8,7,8] and in string "abcdaabdlfjl'

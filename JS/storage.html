@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
     }
 </script>
 </body>
-</html>
+</html> -->
 
 
 
@@ -63,3 +63,157 @@
 </script>
 </body>
 </html> -->
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage Example</title>
+</head>
+<body>
+
+  <h3>Local Storage Example</h3>
+
+  <label for="key">Key:</label>
+  <input type="text" id="key" placeholder="Enter key">
+  <br><br>
+
+  <label for="value">Value:</label>
+  <input type="text" id="value" placeholder="Enter value">
+  <br><br>
+
+  <button onclick="saveToLocal()">Save</button>
+  <button onclick="getFromLocal()">Get</button>
+  <button onclick="removeFromLocal()">Remove</button>
+
+  <p id="output"></p>
+
+  <script>
+    function saveToLocal() {
+      const key = document.getElementById("key").value;
+      const value = document.getElementById("value").value;
+
+      if (!key || !value) {
+        alert("Please enter both key and value.");
+        return;
+      }
+
+      localStorage.setItem(key, value);
+      alert(`Saved: { ${key}: ${value} }`);
+    }
+
+    function getFromLocal() {
+      const key = document.getElementById("key").value;
+      if (!key) {
+        alert("Please enter a key to retrieve.");
+        return;
+      }
+
+      const value = localStorage.getItem(key);
+      if (value !== null) {
+        document.getElementById("output").textContent = `Stored Value: ${value}`;
+      } else {
+        document.getElementById("output").textContent = `No value found for key "${key}"`;
+      }
+    }
+
+    function removeFromLocal() {
+      const key = document.getElementById("key").value;
+      if (!key) {
+        alert("Please enter a key to remove.");
+        return;
+      }
+
+      localStorage.removeItem(key);
+      alert(`Removed value for key: ${key}`);
+      document.getElementById("output").textContent = "";
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SessionStorage Example</title>
+</head>
+<body>
+
+  <h3>Session Storage Example</h3>
+
+  <label for="key">Key:</label>
+  <input type="text" id="key" placeholder="Enter key">
+  <br><br>
+
+  <label for="value">Value:</label>
+  <input type="text" id="value" placeholder="Enter value">
+  <br><br>
+
+  <button onclick="saveToSession()">Save</button>
+  <button onclick="getFromSession()">Get</button>
+  <button onclick="removeFromSession()">Remove</button>
+
+  <p id="output"></p>
+
+  <script>
+    // Save data to sessionStorage
+    function saveToSession() {
+      const key = document.getElementById("key").value;
+      const value = document.getElementById("value").value;
+
+      if (!key || !value) {
+        alert("Please enter both key and value.");
+        return;
+      }
+
+      sessionStorage.setItem(key, value);
+      alert(`Saved: { ${key}: ${value} }`);
+    }
+
+    // Get data from sessionStorage
+    function getFromSession() {
+      const key = document.getElementById("key").value;
+      if (!key) {
+        alert("Please enter a key to retrieve.");
+        return;
+      }
+
+      const value = sessionStorage.getItem(key);
+      if (value !== null) {
+        document.getElementById("output").textContent = `Stored Value: ${value}`;
+      } else {
+        document.getElementById("output").textContent = `No value found for key "${key}"`;
+      }
+    }
+
+    // Remove data from sessionStorage
+    function removeFromSession() {
+      const key = document.getElementById("key").value;
+      if (!key) {
+        alert("Please enter a key to remove.");
+        return;
+      }
+
+      sessionStorage.removeItem(key);
+      alert(`Removed value for key: ${key}`);
+      document.getElementById("output").textContent = "";
+    }
+  </script>
+
+</body>
+</html>
