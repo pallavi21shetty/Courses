@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form with Confirmation</title>
+</head>
+<body>
+  <h2>Sample Form</h2>
+
+  <form id="myForm" action="success.html" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Get form
+    const form = document.getElementById("myForm");
+
+    // Add submit event
+    form.addEventListener("submit", function(event) {
+      // Show confirmation popup
+      const confirmed = confirm("Are you sure you want to submit the form?");
+      
+      // If not confirmed, stop submission
+      if (!confirmed) {
+        event.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Window Confirm Example</title>
+</head>
+<body>
+  <h2>Window Confirm Demo</h2>
+
+  <button onclick="showConfirm()">Click Me</button>
+
+  <p id="result"></p>
+
+  <script>
+    function showConfirm() {
+      // Show confirmation dialog
+      let answer = window.confirm("Do you want to continue?");
+
+      // Display result based on choice
+      if (answer) {
+        document.getElementById("result").innerText = "You clicked OK!";
+      } else {
+        document.getElementById("result").innerText = "You clicked Cancel!";
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="mydropdown">
+         <option value="">select an option</option>
+        <option value="1">option 1</option>
+         <option value="2">option 2</option>
+          <option value="3">option 3</option>
+    </select>
+
+    <script>
+        const dropdown = document.getElementById("mydropdown")
+        document.addEventListener("click", function(event){
+            if(!dropdown.contains(event.target)){
+                alert("you clicked outside dropdown!!")
+            }
+        })
+    </script>
+</body>
+</html>
